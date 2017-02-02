@@ -286,7 +286,7 @@ php:
     composer_home: ''
 xdebug:
     install: '1'
-    settings:		
+    settings:
         xdebug.remote_connect_back: '1'
         xdebug.remote_port: '9000'
         xdebug.remote_autostart: 1
@@ -449,4 +449,3 @@ solr:
     settings:
         version: 5.5.2
         port: '8984'
-		
