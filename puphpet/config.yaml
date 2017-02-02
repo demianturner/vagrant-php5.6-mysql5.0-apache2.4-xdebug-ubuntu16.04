@@ -107,12 +107,12 @@ users_groups:
 locale:
     install: '1'
     settings:
-        default_locale: de_DE.UTF-8
+        default_locale: en_GB.UTF-8
         locales:
             - en_GB.UTF-8
             - en_US.UTF-8
             - de_DE.UTF-8
-        timezone: Europe/Berlin
+        timezone: Europe/London
 firewall:
     install: '1'
     rules: {  }
@@ -271,7 +271,7 @@ php:
         max_input_time: '999'
         upload_max_filesize: 1024M
         post_max_size: 1024M
-        date.timezone: Europe/Berlin
+        date.timezone: Europe/London
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
@@ -286,14 +286,23 @@ php:
     composer_home: ''
 xdebug:
     install: '1'
-    settings:
-        xdebug.default_enable: '0'
-        xdebug.remote_enable: '1'
+    settings:		
         xdebug.remote_connect_back: '1'
-        xdebug.remote_handler: dbgp
-        xdebug.remote_mode: jit
-        xdebug.show_local_vars: '1'
-        xdebug.max_nesting_level: '1000'
+        xdebug.remote_port: '9000'
+        xdebug.remote_autostart: 1
+        xdebug.remote_enable: 1 
+        xdebug.remote_mode: 'req'
+        xdebug.show_local_vars: '1'		
+        xdebug.remote_log: '/var/log/xdebug-remote.log'
+        xdebug.idekey: MY_AWESOME_KEY		
+        xdebug.dump_globals: '1'
+        xdebug.dump_once: '1'
+        xdebug.extended_info: '1'
+        xdebug.max_nesting_level: '100'
+        xdebug.remote_connect_back: '0'
+        xdebug.remote_handler: 'dbgp'
+        xdebug.collect_params: '1'
+        xdebug.default_enable: '1'
 blackfire:
     install: '0'
     settings:
@@ -440,3 +449,4 @@ solr:
     settings:
         version: 5.5.2
         port: '8984'
+		
