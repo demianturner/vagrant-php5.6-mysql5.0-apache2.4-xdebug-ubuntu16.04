@@ -20,8 +20,8 @@ vagrantfile:
                         update_guest_tools: 0
                 machines:
                     vflm_x5dp5nfkt864:
-                        id: cakebakePHP56
-                        hostname: php56.cakebake.dev
+                        id: seagullframeworkPHP56
+                        hostname: php56.seagullframework.dev
                         network:
                             private_network: 192.168.33.99
                             forwarded_port:
@@ -133,9 +133,9 @@ nginx:
     upstreams: {  }
     vhosts:
         nxv_q3unwjxcve8c:
-            server_name: awesome.dev
+            server_name: seagullframework.dev
             server_aliases:
-                - www.awesome.dev
+                - www.seagullframework.dev
             www_root: /var/www/awesome
             listen_port: '80'
             client_max_body_size: 1m
@@ -197,9 +197,9 @@ apache:
         - rewrite
     vhosts:
         av_820cco41fnls:
-            servername: php56.cakebake.dev
+            servername: php56.seagullframework.dev
             serveraliases:
-                - www.php56.cakebake.dev
+                - www.php56.seagullframework.dev
             docroot: /var/www/html
             port: '80'
             setenv:
